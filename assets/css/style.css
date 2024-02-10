@@ -33,6 +33,13 @@ a {
   color: currentColor;
 }
 
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
 .btn {
   --height: 60px;
 
@@ -111,12 +118,14 @@ a {
   line-height: 1.6em;
 }
 
-.logo__branch {
+.logo__brand {
+  font-family: "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: block;
   font-size: 1.8em;
   color: #fff;
 }
-.logo__branch--small {
+.logo__brand--small {
   font-size: 1.2em;
   font-weight: 300;
 }
@@ -446,7 +455,8 @@ a {
 
 /* Member */
 .member {
-  padding-top: 170px;
+  margin-top: 85px;
+  padding-top: 85px;
   text-align: center;
 }
 
@@ -571,4 +581,315 @@ a {
   display: flex;
   column-gap: 28px;
   margin-top: 38px;
+}
+
+/* News */
+.news {
+  margin-top: 170px;
+}
+
+.news__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news__content {
+  flex-shrink: 0;
+  width: 470px;
+}
+
+.news__more {
+  display: inline-block;
+  margin-top: 28px;
+  color: #10375c;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 28px;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.news__more:hover {
+  opacity: 0.7;
+}
+.news__control {
+  display: flex;
+  margin-top: 28px;
+  column-gap: 18px;
+}
+
+.news__control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 1px solid #575f67;
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  color: #575f67;
+  transition: 0.25s;
+}
+
+.news__control-btn:hover {
+  border-color: #2e80ce;
+  background: #2e80ce;
+  color: #fff;
+  cursor: pointer;
+}
+
+.news__list {
+  display: flex;
+  column-gap: 30px;
+  max-width: 570px;
+}
+
+.news-item {
+  background: #fff;
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #e8ebee;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.news-item:hover {
+  box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+  border-color: #fff;
+}
+
+.news-item:hover .news-item__img {
+  transform: scale(1.1);
+}
+
+.news-item__thumb {
+  height: 172px;
+  overflow: hidden;
+}
+
+.news-item__img {
+  margin: -1px;
+  width: calc(100% + 2px);
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.news-item__body {
+  padding: 18px 21px;
+}
+
+.news-item__heading {
+  color: #10375c;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+
+.news-item__desc {
+  margin-top: 10px;
+  color: #575f66;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.news-item__more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #10375c;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.26;
+  transition: 0.3s;
+}
+
+.news-item__more:hover {
+  color: #2e80ce;
+}
+
+/* Appoinment */
+.appointment {
+  margin-top: 170px;
+}
+.appointment__inner {
+  padding: 100px 0;
+  background: #f6fbff;
+  text-align: center;
+}
+
+.appointment__heading {
+  position: relative;
+  line-height: 1.2;
+}
+
+.appointment__heading::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  margin: 0 auto;
+  display: block;
+  content: "";
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  border-radius: 999px;
+}
+
+.appointment__desc {
+  margin: 38px auto 0;
+  max-width: 620px;
+  color: #575f66;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.appointment__btn {
+  margin-top: 38px;
+}
+
+/* Footer */
+.footer {
+  font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  margin-top: 170px;
+  padding: 100px 0 42px;
+  background: #10375c;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc {
+  color: #a9b3bb;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.footer__desc-first {
+  margin-top: 21px;
+  font-size: 1.6rem;
+  max-width: 336px;
+}
+
+.footer__desc-second {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  max-width: 273px;
+}
+
+.footer__heading {
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer__list:first-of-type {
+  margin-bottom: 28px;
+}
+
+.footer__item + .footer__item {
+  margin-top: 10px;
+}
+
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.footer__link + .footer__link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 28px;
+}
+
+.footer__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  color: #2e80ce;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.footer__social-btn:hover {
+  color: #fff;
+  background: #2e80ce;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.footer-form__input {
+  outline: none;
+  padding: 0 10px;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  background: transparent;
+  width: 212px;
+  height: 46px;
+}
+
+.footer-form__input::placeholder {
+  font-size: 1.4rem;
+  line-height: 26px;
+  color: #9ca8b1;
+}
+
+.footer-form__input:focus {
+  color: #fff;
+}
+
+.footer-form__submit {
+  --height: 46px;
+
+  min-width: 108px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+
+.footer__copyright {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #406181;
+  text-align: center;
+}
+
+.footer__copyright-text {
+  color: #aab3ba;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
 }
